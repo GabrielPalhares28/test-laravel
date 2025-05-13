@@ -6,14 +6,10 @@ use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
-class DatabaseSeeder extends Seeder
+class UserSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // Usuário Admin
         User::create([
             'name' => 'Admin User',
             'email' => 'admin@example.com',
@@ -21,7 +17,6 @@ class DatabaseSeeder extends Seeder
             'is_admin' => true,
         ]);
 
-        // Usuário Leitor
         User::create([
             'name' => 'Reader User',
             'email' => 'reader@example.com',
