@@ -1,9 +1,9 @@
-import route from '../../vendor/tightenco/ziggy/dist/vue.es';
-import { Ziggy } from './ziggy.generated';
+import { createApp } from 'vue';
+import App from './App.vue';
+import { ZiggyVue } from './ziggy';  // Importa o arquivo ziggy.js
 
-export const ZiggyVue = {
-  install(app) {
-    app.config.globalProperties.$route = (...args) => route(...args, Ziggy);
-    app.provide('route', (...args) => route(...args, Ziggy));
-  },
-};
+const app = createApp(App);
+
+app.use(ZiggyVue);  // Usa o plugin ZiggyVue
+
+app.mount('#app');
