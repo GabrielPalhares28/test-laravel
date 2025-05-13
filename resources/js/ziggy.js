@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import { ZiggyVue } from 'ziggy-js'; // ✅ CERTO
+import { ZiggyVue } from 'ziggy.js'; // ✅ CERTO
 
 const app = createApp(App);
 
