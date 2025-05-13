@@ -1,12 +1,17 @@
 import route from 'ziggy-js';
-import { defineComponent } from 'vue';
+import { Ziggy } from './ziggy.routes';
 
-export default route;
+// Configura o route com as rotas definidas
+const routeFunction = (name, params, absolute, config = Ziggy) => {
+    return route(name, params, absolute, config);
+};
 
 // Componente Ziggy para Vue
 export const ZiggyVue = {
     install(app) {
-        app.config.globalProperties.$route = route;
-        app.provide('route', route);
+        app.config.globalProperties.$route = routeFunction;
+        app.provide('route', routeFunction);
     }
 };
+
+export { routeFunction as route };
