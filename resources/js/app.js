@@ -3,7 +3,7 @@ import './bootstrap';
 import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createApp, h } from 'vue';
-import { ZiggyVue } from 'ziggy-js/vue.es'; // Atualizado para usar o pacote npm
+import { ZiggyVue } from 'ziggy-js/dist/vue'; // Caminho correto para o componente Vue do Ziggy
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({
