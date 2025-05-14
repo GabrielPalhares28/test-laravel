@@ -5,7 +5,9 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createApp, h } from 'vue';
 import { ZiggyVue } from 'ziggy-js';
 
-Vue.use(ZiggyVue);
+// Remova esta linha - Vue não está definido e isso é sintaxe do Vue 2
+// Vue.use(ZiggyVue);
+
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({
