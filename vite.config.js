@@ -20,7 +20,7 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
-            'ziggy-js': path.resolve('vendor/tightenco/ziggy/dist/index.esm.js'),
+            ziggy: path.resolve('vendor/tightenco/ziggy/dist/vue.es.js'),
         },
     },
 });
