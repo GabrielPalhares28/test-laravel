@@ -2,6 +2,7 @@
     "private": true,
     "type": "module",
     "scripts": {
+        "prebuild": "mkdir -p node_modules/ziggy-js/dist/vue && echo \"import { Ziggy, route } from 'ziggy-js'; export { Ziggy, route }; export const ZiggyVue = { install(Vue, options) { Vue.mixin({ methods: { route } }); } };\" > node_modules/ziggy-js/dist/vue/index.js",
         "build": "vite build",
         "dev": "vite"
     },
@@ -16,7 +17,7 @@
         "postcss": "^8.5.3",
         "tailwindcss": "^3.4.17",
         "vue": "^3.4.0",
-        "ziggy-js": "^1.0.0"
+        "ziggy-js": "^1.6.0"
     },
     "devDependencies": {
         "vite": "^6.2.4"
