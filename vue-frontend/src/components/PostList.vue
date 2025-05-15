@@ -289,4 +289,5 @@ const deletePost = async (postId) => {
 
 // Carregamento inicial
 onMounted(fetchPosts)
+
 </script>

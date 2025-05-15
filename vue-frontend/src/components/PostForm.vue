@@ -108,5 +108,6 @@ const createPost = async () => {
 const resetForm = () => {
   title.value = ''
   content.value = ''
-}
+}   
+
 </script>
